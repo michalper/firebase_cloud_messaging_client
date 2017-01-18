@@ -1,0 +1,42 @@
+{
+  "name": "michalper/firebase_cloud_messaging_client",
+  "description": "Firebase Cloud Messaging REST API Client",
+  "homepage": "https://github.com/michalper/firebase_cloud_messaging_client",
+  "license": "GNU",
+  "authors": [
+    {
+      "name": "Michał Per",
+      "email": "michal.per@encja.com",
+      "homepage": "https://github.com/michalper",
+      "role": "Head Integration Developer"
+    }
+  ],
+  "support": {
+    "email": "michal.per@encja.com"
+  },
+  "keywords": [
+    "firebase",
+    "cloud",
+    "messaging",
+    "google"
+  ],
+  "repositories": [
+    {
+      "type": "vcs",
+      "url": "https://github.com/michalper/tools"
+    }
+  ],
+  "require": {
+    "itav/serializer": "^1.2",
+    "michalper/tools": "dev-master",
+    "guzzlehttp/guzzle": "^6.2"
+  },
+  "require-dev": {
+  },
+  "type": "library",
+  "autoload": {
+    "psr-4": {
+      "FireBaseClient\\": "lib/FireBaseClient/"
+    }
+  }
+}
