@@ -20,12 +20,6 @@
     "messaging",
     "google"
   ],
-  "repositories": [
-    {
-      "type": "vcs",
-      "url": "https://github.com/michalper/tools"
-    }
-  ],
   "require": {
     "itav/serializer": "^1.2",
     "michalper/tools": "dev-master",
@@ -35,6 +29,9 @@
   },
   "type": "library",
   "autoload": {
+    "psr-0": {
+      "FireBaseClient": "lib/"
+    },
     "psr-4": {
       "FireBaseClient\\": "lib/FireBaseClient/"
     }

@@ -1,13 +1,12 @@
 <?php
 
-namespace PrestaShopClient\Service;
+namespace FireBaseClient\Service;
 
-use FireBaseClient\Service\Service;
 use Itav\Component\Serializer\Serializer;
 
 /**
  * Interface ServiceInterface
- * @package PrestaShopClient\Service
+ * @package FireBaseClient\Service
  */
 interface ServiceInterface
 {

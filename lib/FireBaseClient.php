@@ -1,7 +1,5 @@
 <?php
 
-namespace FireBaseClient;
-
 use FireBaseClient\Service\MessageService;
 use FireBaseClient\Service\Service;
 use Itav\Component\Serializer\Serializer;

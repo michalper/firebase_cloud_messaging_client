@@ -4,7 +4,6 @@ namespace FireBaseClient\Service;
 
 use FireBaseClient\Model\Message;
 use Itav\Component\Serializer\Serializer;
-use PrestaShopClient\Service\ServiceInterface;
 
 class MessageService implements ServiceInterface
 {
@@ -30,8 +29,13 @@ class MessageService implements ServiceInterface
         $this->serializer = $serializer;
     }
 
+    /**
+     * @param Message $message
+     */
     public function send(Message $message)
     {
-
+        $this->service
+            ->setMessage($this->serializer->normalize($message))
+            ->request();
     }
 }
