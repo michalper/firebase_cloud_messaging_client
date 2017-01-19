@@ -5,6 +5,10 @@ namespace FireBaseClient\Service;
 use GuzzleHttp\Client;
 use Tools\Tools;
 
+/**
+ * Class Service
+ * @package FireBaseClient\Service
+ */
 class Service
 {
     const REQUEST_METHOD_GET = 'GET';
@@ -81,32 +85,28 @@ class Service
         return $this;
     }
 
+    /**
+     * @return \Psr\Http\Message\ResponseInterface
+     * @throws \Exception
+     */
     public function request()
     {
         if (!$this->getApiKey()) {
             throw new \Exception('Api key missing.');
         }
 
+        $request = $this->client->request(
+            self::REQUEST_METHOD_POST,
+            '',
+            [
+                'headers' => [
+                    'Authorization' => 'key=' . $this->getApiKey()
+                ],
+                'json' => $this->getMessage()
+            ]
+        );
 
-        try {
-            $test = $this->client->request(
-                self::REQUEST_METHOD_POST,
-                '',
-                [
-                    'headers' => [
-                        'Authorization' => 'key=' . $this->getApiKey()
-                    ],
-                    'json' => json_encode($this->getMessage())
-                ]
-            );
-        } catch (\Exception $exception) {
-            Tools::dump(0, $exception->getCode());
-            Tools::dump(1, $exception->getMessage());
-        }
-
-        Tools::dump(0, $test->getReasonPhrase());
-        Tools::dump(0, $test->getBody()->getContents());
-        Tools::dump(1, $test->getStatusCode());
+       return $request;
     }
 
 }

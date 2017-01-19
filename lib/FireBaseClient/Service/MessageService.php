@@ -3,8 +3,13 @@
 namespace FireBaseClient\Service;
 
 use FireBaseClient\Model\Message;
+use FireBaseClient\Model\Response\Response;
 use Itav\Component\Serializer\Serializer;
 
+/**
+ * Class MessageService
+ * @package FireBaseClient\Service
+ */
 class MessageService implements ServiceInterface
 {
 
@@ -31,11 +36,14 @@ class MessageService implements ServiceInterface
 
     /**
      * @param Message $message
+     * @return Response
      */
     public function send(Message $message)
     {
-        $this->service
+        $ret = $this->service
             ->setMessage($this->serializer->normalize($message))
             ->request();
+
+        return $this->serializer->denormalize(json_decode($ret->getBody()->getContents(), true), Response::class);
     }
 }
