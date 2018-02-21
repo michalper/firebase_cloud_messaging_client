@@ -22,7 +22,7 @@
   ],
   "require": {
     "itav/serializer": "^1.2",
-    "michalper/tools": "^0.1.0",
+    "michalper/tools": "dev-master",
     "guzzlehttp/guzzle": "^6.2"
   },
   "require-dev": {
