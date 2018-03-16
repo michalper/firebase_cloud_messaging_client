@@ -105,7 +105,7 @@ class Message
      * The key should not be a reserved word ("from" or any word starting with "google" or "gcm"). Do not use any of the words defined in this table (such as collapse_key).
      *
      * Values in string types are recommended. You have to convert values in objects or other non-string data types (e.g., integers or booleans) to string.
-     * @var object
+     * @var mixed
      */
     private $data;
 
@@ -279,7 +279,7 @@ class Message
     }
 
     /**
-     * @return object
+     * @return mixed
      */
     public function getData()
     {
@@ -287,7 +287,7 @@ class Message
     }
 
     /**
-     * @param object $data
+     * @param mixed $data
      * @return Message
      */
     public function setData($data)

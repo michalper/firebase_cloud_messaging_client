@@ -69,6 +69,11 @@ class Notification
     private $title_loc_args;
 
     /**
+     * @var array
+     */
+    private $data;
+
+    /**
      * @return string
      */
     public function getTitle()
@@ -281,6 +286,24 @@ class Notification
     public function setTitleLocArgs($title_loc_args)
     {
         $this->title_loc_args = $title_loc_args;
+        return $this;
+    }
+
+    /**
+     * @return array
+     */
+    public function getData()
+    {
+        return $this->data;
+    }
+
+    /**
+     * @param array $data
+     * @return Notification
+     */
+    public function setData($data)
+    {
+        $this->data = $data;
         return $this;
     }
 
