@@ -2,7 +2,6 @@
   "name": "michalper/firebase_cloud_messaging_client",
   "description": "Firebase Cloud Messaging REST API Client",
   "homepage": "https://github.com/michalper/firebase_cloud_messaging_client",
-  "license": "GNU",
   "authors": [
     {
       "name": "Michał Per",
