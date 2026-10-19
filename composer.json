@@ -20,9 +20,10 @@
     "google"
   ],
   "require": {
+    "php": ">=7.2.5",
     "itav/serializer": "^1.2",
     "michalper/tools": "dev-master",
-    "guzzlehttp/guzzle": "^6.2"
+    "guzzlehttp/guzzle": "^7.0"
   },
   "require-dev": {
   },
